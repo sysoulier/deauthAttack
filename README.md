@@ -43,25 +43,26 @@ sudo ifconfig wlan0 up
 #### Recuperation des adresses MAC
 
 1 - Récuperation des adresses MAC des machines connectées au réseau : 
-'''
+```
 awk -F ',' {'print $1'} output/client-01.csv | sed '1,5d' > client.txt
-'''
+```
 2 - Donner les droits au fichier
-‘‘‘
+```
 chmod 700 client.txt
-‘‘‘
+```
 
 #### Installation outils
-'''
+Installation de l'outils de traduction MAC -> Marque (OUI)
+```
 git clone https://github.com/silverwind/oui.git
 sudo apt install npm
 npm i -g oui
-'''
+```
 
 ## Phase d'attaque
 Il faut penser à recuperer le bssid à attaque avec son channel
 
-'''
+```
 sudo python3 deauth.py
-'''
+```
 
