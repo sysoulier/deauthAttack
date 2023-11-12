@@ -15,6 +15,7 @@ print("Analyse du réseau :")
 for _ in tqdm(range(200), desc="Traitement en cours"):
 	time.sleep(0.1)
 
+#Commandes en commentaire car le fichier client.txt est déjà généré (gain de temps)
 #commande = f"airodump-ng --bssid {bssid} -c 1 -w output/client wlan0mon"
 #process = subprocess.Popen(commande, shell=True)
 #time.sleep(15)
