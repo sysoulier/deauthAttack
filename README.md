@@ -23,7 +23,10 @@ sudo airmon-ng start wlan0
 ```
 sudo airodump-ng wlan0mon
 ```
-
+5 - Information spécifique sur un réseau ( sortie dans output/client )
+'''
+sudo airodump-ng --bssid <BSSID> -c <channel> -w output/client wlan0mon
+'''
 #### Repasser en mode managed :
 
 1 - Arreter le mode monitor :
@@ -35,3 +38,30 @@ sudo airmon-ng stop wlan0mon
 ```
 sudo ifconfig wlan0 up
 ```
+
+## Phase de préparation
+#### Recuperation des adresses MAC
+
+1 - Récuperation des adresses MAC des machines connectées au réseau : 
+'''
+awk -F ',' {'print $1'} output/client-01.csv | sed '1,5d' > client.txt
+'''
+2 - Donner les droits au fichier
+‘‘‘
+chmod 700 client.txt
+‘‘‘
+
+#### Installation outils
+'''
+git clone https://github.com/silverwind/oui.git
+sudo apt install npm
+npm i -g oui
+'''
+
+## Phase d'attaque
+Il faut penser à recuperer le bssid à attaque avec son channel
+
+'''
+sudo python3 deauth.py
+'''
+
