@@ -5,7 +5,7 @@ Projet de création d'une attaque dos sur un réseau sans fil via l'utilisation 
 
 ```
 sudo apt-get install aircrack-ng
-pip install -r requirements.txt
+sudo pip3 install -r requirements.txt
 chmod +x script/*
 git clone https://github.com/silverwind/oui.git
 sudo apt install npm
