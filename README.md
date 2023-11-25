@@ -28,7 +28,7 @@ Il faudra connaitre le bssid et le channel du reseau victime.
 
 Assurez vous d'utiliser une interface réseau sans fil qui pourra passer en mode monitor.
 
-Execution de l'outil :
+Exécution de l'outil :
 ```
 sudo python3 deauth.py
 ```
