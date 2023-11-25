@@ -1,5 +1,6 @@
 # Deauth Attack Dos
 Projet de création d'une attaque dos sur un réseau sans fil via l'utilisation de trame Deauth.
+
 Outils développé en utilisant python et scapy.
 
 ## Installation :
@@ -24,6 +25,7 @@ sudo airodump-ng <interface_monitor>
 
 ## Phase d'attaque
 Il faudra connaitre le bssid et le channel du reseau victime.
+
 Assurez vous d'utiliser une interface réseau sans fil qui pourra passer en mode monitor.
 
 ```
