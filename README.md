@@ -11,7 +11,7 @@ sudo pip3 install -r requirements.txt
 chmod +x script/*
 git clone https://github.com/silverwind/oui.git
 sudo apt install npm
-npm i -g oui
+sudo npm i -g oui
 ```
 
 ## Phase de reconnaissance :  
